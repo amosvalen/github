@@ -1,11 +1,12 @@
 from flask import Flask,render_template
 import datasource
 
+
 app = Flask(__name__)
 @app.route("/")
 def index():
-    stock_data = datasource.get_stock_data(stockid=2303)    
-    return render_template("index.jinja.html",stockid=2303,stock=stock_data)
+    #stock_data = datasource.get_stock_data(stockid=2303)    
+    return render_template("index.jinja.html")
 
 
 @app.route("/features/")
@@ -20,4 +21,4 @@ def priceing():
 
 @app.route("/about/")
 def about():
-    return render_template("about.jinja.html")
+    return render_template("about.jinja.html"))
