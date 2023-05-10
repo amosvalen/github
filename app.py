@@ -21,4 +21,4 @@ def priceing():
 
 @app.route("/about/")
 def about():
-    return render_template("about.jinja.html"))
+    return render_template("about.jinja.html")
