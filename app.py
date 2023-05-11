@@ -30,3 +30,4 @@ def form():
         return render_template("form.jinja.html")
     elif request.method  == 'GET':
         return render_template("form.jinja.html")
+    
