@@ -22,9 +22,6 @@ def get_stock_data(stockid):
         stock_dataFrame = pdr.get_data_yahoo(stockid_str)
         stock_dataFrame.to_csv(csv_file_path)
     stock_dataFrame = pd.read_csv(csv_file_path)
-    print(stock_dataFrame)
-    #stock_dataFrame1 = stock_dataFrame.reset_index()
-    #stock_dataFrame1['Date'] = stock_dataFrame1['Date'].map(lambda x:f'{x.year}-{x.month}-{x.day}')
     stock_list = stock_dataFrame.to_numpy().tolist()
     return stock_list
 
